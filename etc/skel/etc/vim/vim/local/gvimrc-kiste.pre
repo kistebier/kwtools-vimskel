@@ -1,0 +1,20 @@
+" 
+" gvimrc-kiste.pre - gvimrc pre configuration file for user kiste
+" ____________________________________________________________
+
+" Developed by Kai Wilke 'Kiste' <kiste@netzworkk.de>
+" Copyright (c) 2009-2016 Netzworkk, http://www.netzworkk.de/
+" All rights reserved.
+
+" Please don't hesitate to correct my english :)
+" Send corrections to
+
+" Set title of the window to Netzworkk's copyright
+set titleold=
+set titlestring=gvim\ (c)\ 2009\-2016\ Netzworkk
+set title
+
+" Modeline {{{
+" vim:set ts=4:
+" vim600:fdm=marker fdl=0 fdc=3
+" }}}

@@ -1,0 +1,18 @@
+" 
+" vimrc-kiste.post - vimrc post configuration file for user kiste
+" ____________________________________________________________
+
+" Developed by Kai Wilke 'Kiste' <kiste@netzworkk.de>
+" Copyright (c) 2009-2016 Netzworkk, http://www.netzworkk.de/
+" All rights reserved.
+
+" Please don't hesitate to correct my english :)
+" Send corrections to
+
+" Colorscheme for fore- and background
+colorscheme kiste
+
+" Modeline {{{
+" vim:set ts=4:
+" vim600:fdm=marker fdl=0 fdc=3
+" }}}

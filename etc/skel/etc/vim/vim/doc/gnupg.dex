@@ -1,0 +1,51 @@
+*gnupg.dex* gnupg utility for vim
+
+Author: James McCoy <jamessan@jamessan.com>
+Author: (Translation-de): Kai Wilke <kiste@netzworkk.de>
+
+EINLEITUNG                                    *gnupg*
+
+Dieses Skript ermöglicht eine transparente Bearbeitung von Gpg
+verschlüsselten Dateien. Der Dateiname muss eine  ".gpg", ".pgp"
+oder ".asc" Endung besitzen.  Beim Öffnen einer solchen Datei
+wird der Inhalt entschlüsselt, beim Öffnen einer neuen Datei wird
+das Skript fragen für welche Empfänger die Datei verschlüsselt
+werden soll. Der Inhalt der Datei wird für alle Empfänger
+verschlüsselt, bevor sie geschrieben ist.  Das Skript deaktiviert
+viminfo, swapfile und undofile zur Erhöhung der Sicherheit.
+
+
+BEFEHLE                                        *gnupg-befehle*
+
+gnupg.vim stellt die folgenden Befehle zur Verfügung:
+
+:GPGEditRecipients
+Öffnen des Buffers um die Empfänger zu ändern. Empfänger die
+unbekannt sind (nicht ihr eigener öffentlicher Schlüssel) werden
+hervor gehoben und haben ein "!" Zeichen vorangestellt.
+
+:GPGViewRecipients
+Zeigt eine Liste der Empfänger. Normal ist die Email-Adresse des
+eigeloggten Users. Unbekannte Empfänger werden mit dem Zeichen "!"
+gekennzeichnet.
+                   
+:GPGEditOptions
+Öffnen des Buffers um die gnupg Optionen zu ändern.
+Beim schliessen/speichern des Buffers werden die Änderungen permanent.
+Sie sollten wissen was Sie hier tun.
+                                     
+:GPGViewOptions
+Zeigt eine Liste an Optionen.
+
+
+UEBER                                           *gnupg-ueber*
+
+gnupg.vim ist verfügbar auf GitHub:
+
+  https://github.com/jamessan/vim-gnupg
+
+und auch auf VimScripts:
+
+  http://www.vim.org/scripts/script.php?script_id=3645
+
+vim:tw=78:et:ft=help:norl:

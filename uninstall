@@ -1,0 +1,33 @@
+#!/bin/zsh
+# Autor: Kai Wilke <kiste@netzworkk.de> 14.11.2011
+#
+# Script: uninstall, deinstalliert alle Dateien vom Paket
+#         kwtools-vimskel
+#
+# Version: 0.0.2
+#
+setopt shwordsplit extendedglob
+setopt nonomatch
+
+if [ "`id -u`" != 0 ] ; then
+	echo ""
+	echo "Please become root before running uninstall"
+	echo ""
+	exit 1
+fi
+
+# Variablen initiieren
+ETC_DIR="/etc/skel"
+
+# skel Dateien loeschen
+rm -f ${ETC_DIR}/etc/vim >/dev/null 2>&1
+rmdir ${ETC_DIR}/etc >/dev/null 2>&1
+rm -f ${ETC_DIR}/{.vim,.vimrc,.gvimrc} >/dev/null 2>&1
+
+# Doc Dateien loeschen
+rm -f /usr/share/doc/kwtools-vimskel >/dev/null 2>&1
+
+# lintian Datei loeschen
+rm -f /usr/share/lintian/overrides/kwtools-vimskel* >/dev/null 2>&1
+
+exit 0

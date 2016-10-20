@@ -1,0 +1,48 @@
+*gnupg.txt* gnupg utility for vim
+
+Author: James McCoy <jamessan@jamessan.com>
+Author: (Helpfile): Kai Wilke <kiste@netzworkk.de>
+
+INTRODUCTION                                    *gnupg*
+
+This script implements transparent editing of gpg encrypted files. The
+filename must have a ".gpg", ".pgp" or ".asc" suffix. When opening such
+a file the content is decrypted, when opening a new file the script will
+ask for the recipients of the encrypted file. The file content will be
+encrypted to all recipients before it is written. The script turns off
+viminfo, swapfile, and undofile to increase security.
+
+
+COMMANDS                                        *gnupg-commands*
+
+gnupg.vim makes the following commands available:
+
+:GPGEditRecipients
+Opens a scratch buffer to change the list of recipients. Recipients that
+are unknown (not in your public key) are highlighted and have
+a prepended "!". Closing the buffer makes the changes permanent.
+
+:GPGViewRecipients
+Prints the list of recipients.
+
+:GPGEditOptions
+Opens a scratch buffer to change the options for encryption (symmetric,
+asymmetric, signing). Closing the buffer makes the changes permanent.
+WARNING: There is no check of the entered options, so you need to know
+what you are doing.
+
+:GPGViewOptions
+Prints the list of options.
+
+
+ABOUT                                           *gnupg-about*
+
+gnupg.vim is available on GitHub:
+
+  https://github.com/jamessan/vim-gnupg
+
+and also on VimScripts:
+
+  http://www.vim.org/scripts/script.php?script_id=3645
+
+vim:tw=78:et:ft=help:norl:

@@ -1,0 +1,17 @@
+Source: kwtools-vimskel
+Section: editors
+Priority: optional
+Maintainer: Kai Wilke <kiste@netzworkk.de>
+Homepage: http://www.netzworkk.org
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+
+Package: kwtools-vimskel
+Section: editors
+Architecture: all
+Priority: optional
+Depends: vim (>= 7.4)
+Suggests: translate
+Replaces: kwtools-vimskel (<< ${misc:Depends})
+Description: vim skeleton files.
+ These are general Example files and functions for vim 8.

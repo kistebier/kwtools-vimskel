@@ -1,0 +1,31 @@
+kwtools-vimskel for Linux
+-----------------
+
+1. Installation
+2. Notizen
+3. Pakete
+4. Dokumentation
+
+1. Installation
+-----------------------------------------------------------------------
+Ausführliche Beschreibung steht in der Datei INSTALL. Diese ist nur
+vorhanden, wenn Sie die Sourcen benutzen.
+
+2. Notizen
+-----------------------------------------------------------------------
+Keine.
+
+3. Pakete
+-----------------------------------------------------------------------
+Es sind folgende Debian Pakete vorhanden und liegen unter:
+deb http://www.netzworkk.org/debian-kwtools stretch main
+deb-src http://www.netzworkk.org/debian-kwtools stretch main
+
+kwtools-vimskel: Skelett fuer den Editor vim.
+
+4. Dokumentation
+-----------------------------------------------------------------------
+Dies sind die Beispiel Konfigurationsdateien fuer den Editor vim.
+http://www.netzworkk.org/doku/kwtools-vimskel/index.html
+
+ -- Kai Wilke <kiste@netzworkk.de>, Thu, 06 October 2016 21:50:27 +0100

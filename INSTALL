@@ -1,0 +1,52 @@
+					INSTALL (06.10.2016)
+
+1. Allgemein
+2. Was wird vor der Installation benötigt.
+3. Installation
+4. Pakete 
+5. Deinstallation
+
+1. Allgemein
+---------------------------------------------------------------------------
+   Das Paket kwtools-vimskel unterliegt der GPL Lizenz, siehe copyright
+   Datei.
+
+2. Was wird vor der Installation benötigt.
+---------------------------------------------------------------------------
+   Um die Sourcen zu installieren benötigen sie folgende 
+   Programme: vim >=7.2
+
+   Kontrollieren sie ob dieses Paket installiert ist.
+   dpkg -s vim
+
+   Bei RPM-basierten Distributionen könnte der Paketname
+   abweichen.
+
+3. Installation
+---------------------------------------------------------------------------
+   Als erstes sollten Sie das alte Paket mit dem alten
+   uninstall Script entfernen.
+
+   Wenn alles passt können sie ./install ausführen.
+   
+   ./install
+
+   Die Installation klappt auch, wenn das obige Paket nicht
+   installiert ist.
+   
+4. Paket
+---------------------------------------------------------------------------
+   Es gibt DEB Pakete.
+   DEB Pakete kann man sich installieren mit einem Eintrag in 
+   /etc/apt/sources.list.
+   deb http://www.netzworkk.org/debian-kwtools stretch main
+   deb-src http://www.netzworkk.org/debian-kwtools stretch main
+
+
+5. Deinstallation
+---------------------------------------------------------------------------
+   Fuehren Sie einfach das Script "uninstall" aus, welches den
+   Sourcen beiliegt. Wenn Sie die Sourcen benutzen, deinstallieren Sie immer
+   zuerst mit dem alten "uninstall" Script die kwtools-vimskel Dateien.
+   Manches aendert sich einfach zu schnell.
+

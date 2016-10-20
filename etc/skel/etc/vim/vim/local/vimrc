@@ -1,0 +1,92 @@
+" 
+" vimrc - vimrc configuration file
+" ____________________________________________________________
+
+" Developed by Kai Wilke 'Kiste' <kiste@netzworkk.de>
+" Copyright (c) 2009-2016 Netzworkk, http://www.netzworkk.de/
+" All rights reserved.
+
+" Please don't hesitate to correct my english :)
+" Send corrections to
+
+" zsh als interpreter
+set sh=/bin/zsh
+
+" Rechtschreibpruefung
+if version >= 700
+	let loaded_matchparen = 1
+	
+	" turn spelling on by default
+	set spell
+	
+	" change to german
+	set spelllang=de,en
+	
+	" Spellfiles runterladen
+	"set spf
+
+	" file that "zg" adds good words to
+	" (local to buffer)	
+	set spf=~/.vim/spell/de.add
+	" toggle spelling with F3 key 
+	noremap <F3> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3* &spell, 3)<CR>
+	
+	" limit it to just the top 10 items
+	set sps=best,10
+endif
+
+" Aufruf des Lexikons german to english
+noremap ,l yiw:!translate -l de-en -w <C-R>"<CR>
+" Aufruf des Lexikons english to german
+noremap ,li yiw:!translate -l de-en -i -w <C-R>"<CR>
+"
+" minimum Fensterhöhe
+set wmh=0
+"
+" Ein Zeichen der hier vergebenen und 2 erscheinen.
+"
+inoremap <buffer> " <C-R>=<SID>Double('"','"')<CR>
+inoremap <buffer> ` <C-R>=<SID>Double('`','`')<CR>
+inoremap <buffer> ' <C-R>=<SID>Double("\'","\'")<CR>
+inoremap <buffer> ( ()<Left>
+inoremap <buffer> [ <C-R>=<SID>Double("[","]")<CR>
+inoremap <buffer> { <C-R>=<SID>Double("{","}")<CR>
+
+function! s:Double(left,right)
+    if strpart(getline(line(".")),col(".")-2,2) == a:left . a:right
+        return "\<C-O>s"
+    else
+        return a:left . a:right . "\<Left>"
+    endif
+endfunction
+
+" schreiben , nur bei einer
+" wirklichen veränderung"
+noremap ;w :update<CR>
+
+" Falt methoden
+set fdm=marker
+set commentstring=%s
+
+" Wort Verfollständigung durch die Datei sh.dic
+set dictionary=~/.vim/dictionaries/sh.dic
+
+" Befehle ans Betriebssystem weiterleiten
+" Datei Syntax:
+" Befehl#
+" kopiert den Befehl vom Cursor nach rechts bis zum
+" # Zeichen und fuehrt ihn im Buffer aus.
+nn <F12> yt#:!<C-R>"
+
+" mappt Reformat auf ^j im Input-Mode
+map! <C-j> <Esc>gqapi
+" mappt Reformat auf Q im Command-Mode
+map Q gqap
+
+" VBlockquote.vim - like the tool "boxes" works ;-)
+map ;B <ESC>:'<,'>:call VBlockquote("")<Left><Left>
+
+" Modeline {{{
+" vim:set ts=4:
+" vim600:fdm=marker fdl=0 fdc=3
+" }}}

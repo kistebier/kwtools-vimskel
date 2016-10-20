@@ -1,0 +1,88 @@
+#!/bin/zsh
+# Autor: Kai Wilke <kiste@netzworkk.de> 01.01.2011
+#
+# Script: install, installiert die Dateien des Paketes kwtools-vimskel,
+# ein Vim Skelett fuer neu angelegte Benutzer.
+#
+# Version: 0.0.2
+#
+setopt shwordsplit extendedglob
+
+# Prüfung
+if [ "`id -u`" != 0 ] ; then
+	echo ""
+	echo "Please become root before running install."
+	echo ""
+	exit 1
+fi
+
+INSTALL="`which install`"
+if [[ ! -x $INSTALL ]] ; then
+	echo ""
+	echo "Please install \"install\" or \"coreutils\""
+	echo "before running install."
+	echo ""
+	exit 1
+fi
+
+#
+# Variablen belegen
+#
+VIM_SKEL_PACKAGE=kwtools-vimskel
+PREFIX=/usr
+ETC_PATH=/etc/skel
+DOC_PATH="${PREFIX}/share/doc"
+MAN_PATH="${PREFIX}/share/man"
+LINTIAN_PATH="${PREFIX}/share/lintian/overrides"
+# install Optionen
+INSTALL_DIR_OPT=" -d -m 0755 -o root -g root"
+INSTALL_EXEC_OPT="-m 0755 -o root -g root"
+INSTALL_FILE_OPT="-m 0644 -o root -g root"
+
+#
+# Falls nicht vorhanden, Verzeichnisse erstellen
+#
+if [ ! -d "$ETC_PATH" ] ; then
+	$INSTALL $INSTALL_DIR_OPT $ETC_PATH
+fi
+# Manpages
+for i in {1..8} ; {
+	if [ ! -d "${MAN_PATH}/de/man${i}" ] ; then
+		$INSTALL $INSTALL_DIR_OPT ${MAN_PATH}/de/man${i}
+	fi
+	if [ ! -d "${MAN_PATH}/man${i}" ] ; then
+		$INSTALL $INSTALL_DIR_OPT ${MAN_PATH}/man${i}
+	fi
+}
+
+if [ ! -d "${DOC_PATH}/${VIM_SKEL_PACKAGE}" ] ; then
+	$INSTALL $INSTALL_DIR_OPT ${DOC_PATH}/${VIM_SKEL_PACKAGE}
+fi
+if [ ! -d "$LINTIAN_PATH" ] ; then
+	$INSTALL $INSTALL_DIR_OPT $LINTIAN_PATH
+fi
+#
+# Alle Dateien kopieren
+#
+echo ""
+echo "copy all files."
+echo ""
+sleep 2
+if [ "$OSTYPE" = linux -o "$OSTYPE" = linux-gnu ] ; then
+	CP_OPT="-av"
+else
+	CP_OPT="-Rp"
+fi
+
+# Konfiguration installieren
+$INSTALL $INSTALL_FILE_OPT ./etc/skel/etc $ETC_PATH
+$INSTALL $INSTALL_FILE_OPT ./etc/skel/.* $ETC_PATH
+
+# Lintian Datei installieren
+#$INSTALL $INSTALL_FILE_OPT ./debian/*.lintian $LINTIAN_PATH
+
+# Dokumentation installieren
+$INSTALL $INSTALL_FILE_OPT ./{README.Debian,README.Debian.de,copyright} ${DOC_PATH}/${VIM_SKEL_PACKAGE}
+$INSTALL $INSTALL_FILE_OPT ./{AUTHORS,TODO,INSTALL,changelog*,Release} ${DOC_PATH}/${VIM_SKEL_PACKAGE}
+
+exit 0

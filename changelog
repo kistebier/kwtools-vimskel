@@ -1,0 +1,36 @@
+kwtools-vimskel (0.1.1-1) unstable; urgency=low
+  * New syntax and plugin files boxes.vim.
+  * New spell files de.ascii.spl and de.utf-8.spl.
+  * New doc files CheckAttach.txt, gnupg.txt and gnupg.dex.
+  * New ftplugin files mutt.vim and mail/CheckAttach.vim.
+  * Update of header in any files.
+  * progmenu.vim,helpmenu.vim: Convert text from ISO-8859 to UTF-8.
+
+ -- Kai Wilke <kiste@netzworkk.de>  Thu, 06 Oct 2016 21:37:08 +0100
+ 
+kwtools-vimskel (0.1.0-1) unstable; urgency=low
+  * update: all Scripts and functions.
+
+ -- Kai Wilke <kiste@netzworkk.de>  Thu, 06 Oct 2016 21:37:08 +0100
+ 
+kwtools-vimskel (0.0.1-4) unstable; urgency=low
+  * README.Debian and README.Debian.de update
+  * Packages: insert Hompage.
+
+ -- Kai Wilke <kiste@netzworkk.de>  Sat, 01 Jan 2011 21:58:08 +0100
+ 
+kwtools-vimskel (0.0.1-3) unstable; urgency=low
+  * file rules updated.
+
+ -- Kai Wilke <kiste@netzworkk.de>  Sun, 10 Oct 2010 12:08:22 +0100
+
+kwtools-vimskel (0.0.1-2) unstable; urgency=low
+  * add fo-table keyshots and file mail.vim.
+
+ -- Kai Wilke <kiste@netzworkk.de>  Mon, 23 Nov 2009 09:49:22 +0100
+
+kwtools-vimskel (0.0.1-1) unstable; urgency=low
+  * created
+
+ -- Kai Wilke <kiste@netzworkk.de>  Sun, 30 Aug 2009 14:17:22 +0100
+

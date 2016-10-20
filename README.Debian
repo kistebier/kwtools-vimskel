@@ -1,0 +1,31 @@
+kwtools-vimskel for Linux
+-----------------
+
+1. Installation
+2. Notes
+3. Packages
+4. Dokumentation
+
+1. Installation
+-----------------------------------------------------------------------
+A detailed description can be found in the INSTALL file, which is only
+available if you use the "sources".
+
+2. Notes
+-----------------------------------------------------------------------
+None
+
+3. Packages
+-----------------------------------------------------------------------
+Following Debian-Packages are available and can be found under: 
+deb http://www.netzworkk.org/debian-kwtools stretch main
+deb-src http://www.netzworkk.org/debian-kwtools stretch main
+
+kwtools-vimskel: skel config files for the vim.
+
+4. Dokumentation
+-----------------------------------------------------------------------
+The documentation can be found on the following servers:
+http://www.netzworkk.org/doku/kwtools-vimskel/index.html
+
+ -- Kai Wilke <kiste@netzworkk.de>, Thu, 06 October 2016 21:45:27 +0100

@@ -1,0 +1,37 @@
+
+Directory ~/.vim/local/ is for your own ~/.vimrc files.
+You can put here machine or user specific configuration files.
+
+
+EXAMPLE:
+--------
+
+At server netzworkk.de will user 'kiste' set variable 'g:company'
+to "Netzworkk". He don't will change anything in '~/.vimrc',
+because he is using the same config file at server kainetz.de.
+Therefore he creates file '~/.vim/local/vimrc-netzworkk' and put
+in then:
+
+    let g:company="Netzworkk"
+
+If user 'kai' at server kainetz.de will set 'g:company' to
+"Kai Software", he put in '~/.vim/local/vimrc-kai' (or
+'~/.vim/local/vimrc-kainetz') this line:
+
+    let g:company="Kai Software"
+
+ORDER TO READ FILES:
+--------------------
+~/vim/local/(g)vimrc.pre
+~/vim/local/(g)vimrc-user.pre
+~/vim/local/(g)vimrc-machine.pre
+~/vim/local/(g)vimrc-machine-user.pre
+~/vim/local/(g)vimrc
+~/vim/local/(g)vimrc-user
+~/vim/local/(g)vimrc-machine
+~/vim/local/(g)vimrc-machine-user
+~/vim/local/(g)vimrc.post
+~/vim/local/(g)vimrc-user.post
+~/vim/local/(g)vimrc-machine.post
+~/vim/local/(g)vimrc-machine-user.post
+
