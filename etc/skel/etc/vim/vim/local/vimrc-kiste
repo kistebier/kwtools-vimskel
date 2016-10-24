@@ -13,12 +13,10 @@ let g:author="Kai Wilke 'kiste'"
 let g:email="kiste@netzworkk.de"
 let g:company = "Netzworkk, http://www.netzworkk.de/"
 
-source ~/.vim/modules/database-client.vim
-
 " Anfang eines zsh scriptes beim einfuegen in eine beliebige Datei.
 " Ansonsten sollte man lieber vim Dateiname.zsh benutzen damit der
 " Header gleich erstellt wird.
-noremap <F2> i#!/bin/zsh## Autor: Kai Wilke <kiste@netzworkk.de> 00.00.2016## Script: SCRIPTNAME, Beschreibung ## Version: 0.0.1
+noremap <F2> i#!/bin/zsh<CR>#<CR># Autor: Kai Wilke <kiste@netzworkk.de> 00.00.2016<CR>#<CR># Script: SCRIPTNAME, Beschreibung <CR>#<CR># Version: 0.0.1<CR>
 
 " Modeline {{{
 " vim:set ts=4:
