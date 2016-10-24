@@ -1,0 +1,28 @@
+*mutt.dex* Mutt vom (G)Vim aus starten
+
+Author: Kai Wilke <kiste@netzworkk.de>
+
+EINLEITUNG                                     *mutt*
+
+Mutt ist ein anspruchsvoller Text-basierter Mail User Agent.
+Sie können Mutt aus GVim über das Menü starten; Programme -> Mutt.
+Dabei wird Mutt im X11 Programm xterm ausgeführt, da man im GVim
+sonts nichts lesen kann. Im Vim können Sie Mutt, wie andere externe
+Programme auch starten.
+
+BEFEHLE                                        *mutt-befehle*
+
+:! xterm -T gvim-mutt -geometry ${COLUMNS}x${LINES} -e mutt &<CR>
+Startet Mutt im gvim.
+
+:!mutt<CR>
+Startet Mutt im vim.
+
+
+UEBER                                          *mutt-ueber*
+
+Mutt ist verfügbar unter folgender Adressse:
+
+  http://www.mutt.org/
+
+vim:tw=78:et:ft=help:norl:
