@@ -18,13 +18,19 @@ endif
 " Hilfe Menue
 if (has("menu"))
   an &Help.-sep3- <Nop>
-  amenu &Help.&Plugin.\ &boxes	:help boxes<CR>
+  if executable("boxes")
+    amenu &Help.&Plugin.\ &boxes	:help boxes<CR>
+  endif
   amenu &Help.&Plugin.\ &Gnupg	:help gnupg<CR>
   amenu &Help.&Plugin.\ &Kalender	:help calendar<CR>
   amenu &Help.&Plugin.\ &VBlockquote	:help VBlockquote<CR>
   an &Help.-sep4- <Nop>
-  amenu &Help.&Programme.\ &Mutt	:! echo "Startet den mail client mutt."<CR>
-  amenu &Help.&Programme.\ &Translate :! echo "übersetzt das Wort vom englischen ins deutsche.\nDazu muß der Curser auf dem 1. Buchstaben stehen."<CR>
+  if executable("mutt")
+    amenu &Help.&Programme.\ &Mutt	:help mutt<CR>
+  endif
+  if executable("translate")
+    amenu &Help.&Programme.\ &Translate :! echo "übersetzt das Wort vom englischen ins deutsche.\nDazu muß der Curser auf dem 1. Buchstaben stehen."<CR>
+  endif
 endif
 
 " vim600: set foldmethod=marker foldlevel=0 :
