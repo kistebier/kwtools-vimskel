@@ -1,0 +1,49 @@
+*VBlockquote.dex*   Für Vim version 8.0     Letzte Änderung: 2016 Oktober 25
+
+Autor: Kai Wilke <kiste@netzworkk.de>
+
+
+EINLEITUNG                                     *VBlockquote*
+
+Dieses Skript ermöglicht einen Textabschnitt zu zitieren. Dabei wird am Anfang
+des Textabschnitt ein kleiner Rahmen gezogen.
+
+
+BEFEHLE                                        *VBlockquote-befehle*
+
+VBlockquote.vim stellt die folgenden Befehle zur Verfügung:
+
+                                               *VBlockquote-gvim*
+
+normal:
+Wählen Sie einen Textabschnitt visuell aus und klicken auf Programme ->
+VBlockquote -> normal. Dabei wird ":call VBlockquote()" aufgerufen und
+der ausgewählte Textabschnitt wird folgendermaßen umrandet:
+,----
+|
+| (zitierter) Textabschnitt
+|
+`----
+
+Titel:
+Wählen Sie einen Textabschnitt visuell aus und klicken auf Programme ->
+VBlockquote -> normal. Dabei wird ":call VBlockquote ("")" aufgerufen
+und der ausgewählte Textabschnitt wird folgendermaßen umrandet:
+,----[  ]
+|
+| (zitierter) Textabschnitt
+|
+`----
+Sie können zwischen den eckigen Klammern einen Titel schreiben.
+
+                                               *VBlockquote-vim*
+
+:call VBlockquote()
+Ist das gleiche wie im GVim der Befehl "normal".
+
+:call VBlockquote("Titel")
+Ist das gleiche wie im GVim der Befehl "Titel", bloß das Sie hier das
+Wort Titel zwischen den Apostrophen schon im Vorfeld mit einem
+dementsprechen Titel versehen können.
+
+vim:tw=78:ts=4:ft=help:norl:
