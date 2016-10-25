@@ -1,5 +1,5 @@
 " Name:          helpmenu.vim
-" Last Modified: 2016-10-20 15:07:06
+" Last Modified: 2016-10-24 19:23:06
 " Author:        Kai Wilke <kiste@netzworkk.de>
 " Summary:       Gvim additional menu configuration file
 " URL:           http://www.netzworkk.de
