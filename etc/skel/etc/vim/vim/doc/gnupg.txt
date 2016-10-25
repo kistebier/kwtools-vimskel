@@ -1,6 +1,5 @@
-*gnupg.txt* gnupg utility for vim
+*gnupg.txt*         For Vim version 8.0    Last change: 2016 October 25
 
-Author: James McCoy <jamessan@jamessan.com>
 Author: (Helpfile): Kai Wilke <kiste@netzworkk.de>
 
 INTRODUCTION                                    *gnupg*

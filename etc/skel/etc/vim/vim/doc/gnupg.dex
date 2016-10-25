@@ -1,7 +1,8 @@
-*gnupg.dex* gnupg Nützlichkeit für vim
+*gnupg.dex*          Für Vim version 8.0    Letzte Änderung: 2016 Oktober 25
 
-Author: James McCoy <jamessan@jamessan.com>
-Author (Translation-de): Kai Wilke <kiste@netzworkk.de>
+Autor: James McCoy <jamessan@jamessan.com>
+Autor (Translation-de): Kai Wilke <kiste@netzworkk.de>
+
 
 EINLEITUNG                                    *gnupg*
 
@@ -48,4 +49,4 @@ und auch auf VimScripts:
 
   http://www.vim.org/scripts/script.php?script_id=3645
 
-vim:tw=78:et:ft=help:norl:
+vim:tw=78:ts=4:ft=help:norl:
