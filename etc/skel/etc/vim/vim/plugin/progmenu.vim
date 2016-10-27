@@ -1,5 +1,5 @@
 " Name:          progmenu.vim
-" Last Modified: 2016-10-20 03:31:06
+" Last Modified: 2016-10-26 06:32:06
 " Author:        Kai Wilke <kiste@netzworkk.de>
 " Summary:       Gvim additional menu configuration file
 " URL:           http://www.netzworkk.de
@@ -14,24 +14,13 @@
 if (has("menu"))
   amenu <silent> Plugin.Kalender.\ vertikal	:Calendar<CR>
   amenu <silent> Plugin.Kalender.\ horizental	:CalendarH<CR>
-  amenu <silent> Plugin.VBlockquote.\ Title<TAB> :'<,'>:call VBlockquote("")<CR>
-  amenu <silent> Plugin.VBlockquote.\ Zitat<TAB> :'<,'>:call VBlockquote()<CR>
+  amenu <silent> Plugin.VBlockquote.\ normal<TAB> :'<,'>:call VBlockquote()<CR>
+  amenu <silent> Plugin.VBlockquote.\ Titel<TAB> :'<,'>:call VBlockquote("")<CR>
 endif
 
 " Programm Menue
 if exists("loaded_progmenu")
   aunmenu Programme
-endif
-" einzelne Programme
-"
-if (has("menu"))
-  if executable("mutt")
-    amenu &Programme.\ &Mutt\ (mail) :! xterm -T gvim-mutt -geometry ${COLUMNS}x${LINES} -e mutt &<CR>
-  endif
-  if executable("translate")
-    amenu &Programme.\ &Translate.\ de-en yiw:!translate -l de-en -w <C-R>"<CR>
-    amenu &Programme.\ &Translate.\ en-de yiw:!translate -l de-en -i -w <C-R>"<CR>
-  endif
 endif
 
 
