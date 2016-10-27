@@ -1,0 +1,41 @@
+*translate.dex*   Für Vim version 8.0     Letzte Änderung: 2016 Oktober 27
+
+Autor: Kai Wilke 'kiste' <kiste@netzworkk.de>
+
+
+EINLEITUNG                                     *translate*
+
+Das Programm translate schlägt ein Wort in einer Datei mit
+Sprache-zu-Sprache-Übersetzungen (das Trennzeichen sollte \" :: \" sein)
+nach und unterhält lokale Wörterbücher. So dürfte es einfach sein,
+weitere Sprachen hinzufügen, wenn man ein passendes Wörterbuch hat.
+Im Vim muss der Curser auf dem 1. Zeichen eines Wortes stehen.
+
+
+BEFEHLE                                        *translate-befehle*
+
+translate.vim stellt die folgenden Befehle zur Verfügung:
+
+de-en
+Schlägt ein deutsches Wort nach und zeigt die möglichen englischen
+Übersetzungen an.
+
+en-de
+Schlägt ein englisches Wort nach und zeigt die möglichen deutschen
+Übersetzungen an.
+
+
+TASTATURKUERZEL                                *translate-mapping*
+
+,l
+Macht dasselbe wie "de-en" im gvim.
+
+,li
+Macht dasselbe wie "en-de" im gvim.
+
+
+UEBER                                          *translate-ueber*
+
+translate ist im Repository von Debian verfügbar:
+
+vim:tw=78:ts=4:ft=help:norl:
