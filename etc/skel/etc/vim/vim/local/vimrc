@@ -35,11 +35,6 @@ if version >= 700
 	set sps=best,10
 endif
 
-" Aufruf des Lexikons german to english
-noremap ,l yiw:!translate -l de-en -w <C-R>"<CR>
-" Aufruf des Lexikons english to german
-noremap ,li yiw:!translate -l de-en -i -w <C-R>"<CR>
-"
 " minimum Fensterhöhe
 set wmh=0
 "
