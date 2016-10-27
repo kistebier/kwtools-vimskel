@@ -1,0 +1,106 @@
+*boxes.dex*   Für Vim version 8.0     Letzte Änderung: 2016 Oktober 27
+
+Autor: Kai Wilke 'kiste' <kiste@netzworkk.de>
+
+
+EINLEITUNG                                     *boxes*
+
+Boxes ist ein sehr flexibel konfigurierbarer Filter für das Hinzufügen
+oder Entfernen von ASCII-Art (zum Beispiel Kommentaren) um Text-Blöcke.
+Die meisten modernen Editoren unterstützen das Filtern von Text durch
+externe Filter. Boxes ist ein solcher Filter. Markieren Sie visuell
+einen Text-Block und wählen einen Befehl im Menü Programme -> boxes aus
+oder benutzen die Tastaturkürzel.
+
+
+BEFEHLE                                        *boxes-befehle*
+
+boxes.vim stellt die folgenden Befehle zur Verfügung:
+
+Blick
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+/*       _\|/_
+         (o o)
+ +----oOO-{_}-OOo----------------------+
+ |       Das ist ein Text-Block.       |
+ +------------------------------------*/
+
+C_Box
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+/***************************/
+/* Das ist ein Text-Block. */
+/***************************/
+
+C_Kommentar
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+/* Das ist ein Text-Block. */
+
+Hund
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+          __   _,--="=--,_   __
+         /  \."    .-.    "./  \
+        /  ,/  _   : :   _  \/` \
+        \  `| /o\  :_:  /o\ |\__/
+         `-'| :="~` _ `~"=: |
+            \`     (_)     `/
+     .-"-.   \      |      /   .-"-.
+.---{     }--|  /,.-'-.,\  |--{     }---.
+ )  (_)_)_)  \_/`~-===-~`\_/  (_(_(_)  (
+(        Das ist ein Text-Block.        )
+ )                                     (
+'---------------------------------------'
+
+Kopfzeile
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+/***************************************************/
+/*  D a s   i s t   e i n   T e x t - B l o c k .  */
+/***************************************************/
+
+Simple
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+***************************
+* Das ist ein Text-Block. *
+***************************
+
+Zitat
+Erstellt aus dem Text "Das ist ein Text-Block." folgende ASCII-Art:
+,---- [  ]
+| Das ist ein Text-Block.
+`----
+Ist ähnlich wie im Plugin VBlockquote. Zwischen den eckigen Klammern können
+Sie einen Titel eingeben.
+
+
+TASTAUKUERZEL                                  *boxes-mapping*
+
+;0
+Wie Blick im gvim Menü.
+
+;1
+Wie C_Box im gvim Menü.
+
+;2
+Wie C_Kommentar im gvim Menü.
+
+;3
+Wie Hund im gvim Menü.
+
+;4
+Wie Kopfzeile im gvim Menü.
+
+;5
+Wie Simple im gvim Menü.
+
+;6
+Wie Zitat im gvim Menü.
+
+
+UEBER                                          *boxes-ueber*
+
+boxes ist auf folgender Webseite verfügbar:
+
+  http://boxes.thomasjensen.com/
+
+und auch im Repository von Debian.
+
+vim:tw=78:ts=4:ft=help:norl:
