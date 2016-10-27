@@ -1,5 +1,5 @@
 " Name:          helpmenu.vim
-" Last Modified: 2016-10-24 19:23:06
+" Last Modified: 2016-10-24 05:58:06
 " Author:        Kai Wilke <kiste@netzworkk.de>
 " Summary:       Gvim additional menu configuration file
 " URL:           http://www.netzworkk.de
@@ -18,18 +18,18 @@ endif
 " Hilfe Menue
 if (has("menu"))
   an &Help.-sep3- <Nop>
-  if executable("boxes")
-    amenu &Help.&Plugin.\ &boxes	:help boxes<CR>
-  endif
   amenu &Help.&Plugin.\ &Gnupg	:help gnupg<CR>
   amenu &Help.&Plugin.\ &Kalender	:help calendar<CR>
   amenu &Help.&Plugin.\ &VBlockquote	:help VBlockquote<CR>
   an &Help.-sep4- <Nop>
+  if executable("boxes")
+    amenu &Help.&Programme.&boxes	:help boxes<CR>
+  endif
   if executable("mutt")
-    amenu &Help.&Programme.\ &Mutt	:help mutt<CR>
+    amenu &Help.&Programme.&Mutt	:help mutt<CR>
   endif
   if executable("translate")
-    amenu &Help.&Programme.\ &Translate :! echo "übersetzt das Wort vom englischen ins deutsche.\nDazu muß der Curser auf dem 1. Buchstaben stehen."<CR>
+    amenu &Help.&Programme.&Translate :help translate<CR>
   endif
 endif
 
