@@ -7,11 +7,12 @@
 " All rights reserved.
 
 " Please don't hesitate to correct my english :)
-" Send corrections to
+" Send corrections to kiste@netzworkk.de.
 
 let g:author="Kai Wilke 'kiste'"
 let g:email="kiste@netzworkk.de"
-let g:company = "Netzworkk, http://www.netzworkk.de/"
+let g:company="Netzworkk"
+let g:homepage="http://www.netzworkk.de"
 
 " Anfang eines zsh scriptes beim einfuegen in eine beliebige Datei.
 " Ansonsten sollte man lieber vim Dateiname.zsh benutzen damit der
