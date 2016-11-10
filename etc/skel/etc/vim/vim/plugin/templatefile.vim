@@ -1,8 +1,8 @@
 "=============================================================================
 " Vim global plugin for autoload template files
-" File:			templatefile.vim
-" Maintainer:	Kai Wilke 'kiste' <kiste@netzworkk.de>
-" Version:		$Netzworkk: ~/etc/vim/vim/plugin/templatefile.vim,v 0.1.0 2016/10/10 11:49:31 Kiste Exp $
+" File:			 templatefile.vim
+" Last Modified: 2016-11-10 23:03:06
+" Maintainer:	 Kai Wilke 'kiste' <kiste@netzworkk.de>
 "
 " Thanks:
 " 	Scott Urban:	First version of templatefile.vim
@@ -87,21 +87,12 @@ function! LoadTemplateFile()
 	else
 		let Company  = Escape("UNKNOWN Company")
 	endif
+	if exists("g:homepage")
+		let Homepage  = Escape(g:homepage)
+	else
+		let Homepage  = Escape("UNKNOWN Company")
+	endif
 
-	" build variable for @JAVA_PACKAGE@ substitution
-	" Suggested by Ondrej Jombik 'Nepto' <nepto AT platon.sk>
-	" Algoritmus description:
-	" nepto@platon.sk    --> #.platon.sk --> sk.platon.@INCLUDE_GAURD@
-	" rajo AT platon.sk  --> #.platon.sk  --> sk.platon.@INCLUDE_GAURD@
-	let java_pkg = substitute(Email, '^[^@\s]\+\(@\|\s\+AT\s\+\)\(.*\)$', '#.\2', '')
-	let java_pkg = substitute(java_pkg, '[^a-zA-Z0-9.]', '', 'g') " remove ugly chars from email address
-	let loop_count = 0 " avoid endless loop in while
-	while match(java_pkg, '#$') == -1 && loop_count < 10
-		let java_pkg = substitute(java_pkg, '^\([^#]*\)#\(.*\)\.\([a-zA-Z0-9_]\+\)$', '\2.\3#\2', 'g')
-		let loop_count = loop_count + 1
-	endwhile
-	let java_pkg = substitute(java_pkg, '^\.\(.*\)#$', '\1.' . tolower(inc_gaurd), '')
-	
 	silent! execute "%s/@DATE@/"          . date       . "/g"
 	silent! execute "%s/@YEAR@/"          . year       . "/g"
 	silent! execute "%s/@LASTDIR@/"       . lastdir    . "/g"
@@ -112,7 +103,7 @@ function! LoadTemplateFile()
 	silent! execute "%s/@AUTHOR@/"        . Author     . "/g"
 	silent! execute "%s/@EMAIL@/"         . Email      . "/g"
 	silent! execute "%s/@COMPANY@/"       . Company    . "/g"
-	silent! execute "%s/@JAVA_PACKAGE@/"  . java_pkg   . "/g"
+	silent! execute "%s/@HOMEPAGE@/"      . Homepage   . "/g"
 	if exists ("*" . template_func)
 		if exists("g:load_templates")
 			if g:load_templates == "ask"
