@@ -1,0 +1,56 @@
+*templatefile.dex*   Für Vim version 8.0   Letzte Änderung: 2016 November 10
+
+Autor: Kai Wilke 'kiste' <kiste@netzworkk.de>
+
+
+EINLEITUNG                                     *templatefile*
+
+Dieses Plugin ist für das Laden einer Template-Datei zuständig, wenn man eine
+neue Datei erstellt. Eine Template-Datei wird geladen, falls eine existiert,
+Schlüsselwörter in diesem Template werden erweitert und/oder eine
+benutzerdefinierte Funktion für diese Art von Dateien aufgerufen.
+
+Für alle neuen Dateien prüft das Skript, ob Sie eine Template-Datei für die
+Erweiterung der Datei haben. Zum Beispiel bei einer neuen Datei "Temp.c"
+würde auf das Vorhandensein einer "skel.c" Datei geprüft werden. Dateien ohne
+Erweiterungen werden auch behandelt, dabei muss bei der Template-Datei das
+Prefix "skel." weggelassen werden.
+
+Wurde die Umgebungs-Variabel $VIMTEMPLATE mit einem Verzeichnis definiert wird
+in diesem nach Template-Dateien gesucht ansonsten in Ihrem ~/.vim/templates
+Vim-Verzeichnis, wenn die Umgebungs Variabel nicht vorhanden ist.  
+
+Dadurch können Sie mehrere Sätze von Template-Dateien verwenden - für
+Arbeitsdateien und einigen für persönliche Dateien, zum Beispiel.
+
+
+VARIABELN                                      *templatefile-variabeln*
+
+templatefile.vim stellt die folgenden Variabeln zur Verfügung:
+
+Bei let g:load_templates="ask" in Ihrer ".vimrc" werden Sie gefragt, ob eine
+Template-Datei geladen werden soll, bei "no" wird keine geladen.
+
+Diese Variabeln können Sie in einer Template-Datei benutzen:
+Diese 4 Variabeln müssen Sie definieren in der .vimrc oder in einer der
+~/.vim/local/vimrc-* Dateien (s. README, z. B. let g:company="Firmenname").
+@AUTHOR@ - Autor
+@COMPANY@ - Firmenname
+@EMAIL@ - Email Adresse
+@HOMEPAGE@ - Homepage
+
+@DATE@ - Datum im Formate YYYY-MM-DD
+@FILE@ - Dateiname ohne Erweiterung
+@FILE_EXT@ - Verzeichnis/Dateiname.Erweiterung
+@LASTDIR@ - jetziger letzter Verzeichnisname vom ganzen Pfad
+@YEAR@ - Jahr im Format YYYY
+
+
+UEBER                                          *templatefile-ueber*
+
+templatefile.vim ist verfügbar auf VimScripts:
+
+  http://www.vim.org/scripts/script.php?script_id=198
+
+
+vim:tw=78:ts=4:ft=help:norl:
