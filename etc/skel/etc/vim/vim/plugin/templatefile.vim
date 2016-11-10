@@ -1,7 +1,7 @@
 "=============================================================================
 " Vim global plugin for autoload template files
 " File:			 templatefile.vim
-" Last Modified: 2016-11-10 23:03:06
+" Last Modified: 2016-11-10 23:20:06
 " Maintainer:	 Kai Wilke 'kiste' <kiste@netzworkk.de>
 "
 " Thanks:
@@ -90,7 +90,7 @@ function! LoadTemplateFile()
 	if exists("g:homepage")
 		let Homepage  = Escape(g:homepage)
 	else
-		let Homepage  = Escape("UNKNOWN Company")
+		let Homepage  = Escape("UNKNOWN Homepage")
 	endif
 
 	silent! execute "%s/@DATE@/"          . date       . "/g"
