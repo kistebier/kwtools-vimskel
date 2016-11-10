@@ -718,13 +718,12 @@ if has("autocmd")
 	augroup END
 	" }}}
 
-" UGLY hack - preload templatefile.vim. This is needed for loading templates
-" for all buffers (when opening all windows for buffers)
-call Source("~/.vim/plugin/templatefile.vim")
-augroup TemplateSystem
-	autocmd!
-	au BufNewFile * call LoadTemplateFile()
-augroup END
+" Plugin load template file for new files
+" Templates for new files aren't loaded, if g:load_templates == "no"
+" if g:load_templates == "ask" you are asked before loading template
+" If exists enviroment variable $VIMTEMPLATE, templates are loaded from
+" this directory.
+let g:load_templates="ask"
 
 	" Autocomands for GUIEnter {{{
 	augroup GUIEnter
