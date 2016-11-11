@@ -7,7 +7,6 @@
 	PURPOSE:    
 
 	REVISION:
-		$Netzworkk: $
 
 	ASSUMPTIONS:
 	LIMITATIONS:

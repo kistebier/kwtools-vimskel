@@ -4,6 +4,7 @@
 #
 # Developed by @AUTHOR@ <@EMAIL@> @DATE@
 # Copyright (c) @YEAR@ @COMPANY@
+# Homepage: @HOMEPAGE@
 # Licensed under terms of GNU General Public License.
 # All rights reserved.
 #
@@ -14,8 +15,6 @@
 # Changelog:
 # @DATE@ - created
 #
-
-# $Netzworkk$
 
 package @FILE@;
 
@@ -70,6 +69,8 @@ The @FILE@ module allows you ...
 
 =cut
 
+# Modeline for ViM {{{
 # vim: ts=4
 # vim600: fdm=marker fdl=0 fdc=3
+# }}}
 

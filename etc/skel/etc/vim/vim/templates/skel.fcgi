@@ -5,6 +5,7 @@
 
 # Developed by @AUTHOR@ <@EMAIL@> @DATE@
 # Copyright (c) @YEAR@ @COMPANY@
+# Homepage: @HOMEPAGE@
 # Licensed under terms of GNU General Public License.
 # All rights reserved.
 #
@@ -15,8 +16,6 @@
 # Changelog:
 # @DATE@ - created
 #
-
-# $Netzworkk$
 
 $|=1; 
 
@@ -167,6 +166,7 @@ sub to_ascii($;)
 } # }}} 
 
 
+# Modeline for ViM {{{
 # vim: ft=perl
 # vim600: fdm=marker fdl=0 fdc=3
-
+# }}}

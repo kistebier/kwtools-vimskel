@@ -4,6 +4,7 @@
 
 /* Developed by @AUTHOR@ <@EMAIL@> @DATE@
  * Copyright (c) @YEAR@ @COMPANY@
+ *  Homepage: @HOMEPAGE@
  * Licensed under terms of GNU General Public License.
  * All rights reserved.
  *
@@ -16,7 +17,6 @@
  *
  */
 
-/* $Netzworkk$ */
 
 /* Modeline for ViM {{{
  * vim: set ts=4:

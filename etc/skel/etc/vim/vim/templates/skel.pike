@@ -5,6 +5,7 @@
 
 /* Developed by @AUTHOR@ <@EMAIL@> @DATE@
 * Copyright (c) @YEAR@ @COMPANY@
+* Homepage: @HOMEPAGE@
 * Licensed under terms of GNU General Public License.
 * All rights reserved.
 *
@@ -16,8 +17,6 @@
 * @DATE@ - created
 *
 */
-
-/* $Netzworkk$ */
 
 int main() /* {{{ */
 {

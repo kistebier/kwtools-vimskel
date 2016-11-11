@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -171,3 +171,8 @@ src_install() {
 	#
 	#einstall || die "einstall failed"
 }
+
+# Modlines for Vim#{{{
+# vim: ts=4
+# vim600: fdl=0 fdm=marker fdc=3
+#}}}

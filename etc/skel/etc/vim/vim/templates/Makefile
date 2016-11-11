@@ -3,6 +3,7 @@
 
 # Developed by @AUTHOR@ <@EMAIL@> @DATE@
 # Copyright (c) @YEAR@ @COMPANY@
+# Homepage: @HOMEPAGE@
 # Licensed under terms of GNU General Public License.
 # All rights reserved.
 #
@@ -175,5 +176,6 @@ distdir: $(DISTFILES)
 
 # }}}
 
+# Modeline for ViM {{{
 # vim600: fdm=marker fdc=3
-
+# }}}

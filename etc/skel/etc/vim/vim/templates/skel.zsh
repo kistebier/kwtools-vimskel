@@ -5,6 +5,7 @@
 #
 # Developed by @AUTHOR@ <@EMAIL@> @DATE@
 # Copyright (c) @YEAR@ @COMPANY@
+# Homepage: @HOMEPAGE@
 # Licensed under terms of GNU General Public License.
 # All rights reserved.
 #
@@ -16,4 +17,9 @@
 # @DATE@ - created
 #
 
-# $Netzworkk$
+exit 0
+
+# Modeline for ViM {{{
+# vim: ts=4 ft=zsh
+# vim600: fdl=0 fdm=marker fdc=3
+#}}}

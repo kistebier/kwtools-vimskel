@@ -3,6 +3,7 @@
 
 /* Developed by @AUTHOR@ <@EMAIL@> @DATE@
 * Copyright (c) @YEAR@ @COMPANY@
+* Homepage: @HOMEPAGE@
 * Licensed under terms of GNU General Public License.
 * All rights reserved.
 *
@@ -15,9 +16,7 @@
 *
 */
 
-// $Netzworkk$
-
-package @JAVA_PACKAGE@;
+/*package ;*/
 
 /**
  * Short class description
