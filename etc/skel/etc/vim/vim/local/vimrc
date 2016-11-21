@@ -37,26 +37,8 @@ endif
 
 " minimum Fensterhöhe
 set wmh=0
-"
-" Ein Zeichen der hier vergebenen und 2 erscheinen.
-"
-inoremap <buffer> " <C-R>=<SID>Double('"','"')<CR>
-inoremap <buffer> ` <C-R>=<SID>Double('`','`')<CR>
-inoremap <buffer> ' <C-R>=<SID>Double("\'","\'")<CR>
-inoremap <buffer> ( ()<Left>
-inoremap <buffer> [ <C-R>=<SID>Double("[","]")<CR>
-inoremap <buffer> { <C-R>=<SID>Double("{","}")<CR>
 
-function! s:Double(left,right)
-    if strpart(getline(line(".")),col(".")-2,2) == a:left . a:right
-        return "\<C-O>s"
-    else
-        return a:left . a:right . "\<Left>"
-    endif
-endfunction
-
-" schreiben , nur bei einer
-" wirklichen veränderung"
+" schreiben, nur bei einer wirklichen Veränderung
 noremap ;w :update<CR>
 
 " Falt methoden
@@ -80,6 +62,11 @@ map Q gqap
 
 " VBlockquote.vim - like the tool "boxes" works ;-)
 map ;B <ESC>:'<,'>:call VBlockquote("")<Left><Left>
+
+" Plugin autoclose.vim: Inserts matching bracket, paren, brace or quote.
+" Das Plugin paart folgende Zeichen: [, (, {, ", '
+" ,a schaltet das Plugin ein/aus
+nmap ,a <Plug>ToggleAutoCloseMappings
 
 " Modeline {{{
 " vim:set ts=4:
