@@ -1,0 +1,31 @@
+*autoclose.dex*   Für Vim version 8.0     Letzte Änderung: 2016 November 21
+
+Autor: Kai Wilke 'kiste' <kiste@netzworkk.de>
+
+
+EINLEITUNG                                     *autoclose*
+
+Mit autoclose.vim können Sie eines der Zeichen [, (, {, ", ' tippen und
+diese werden gepaart, der Cursor springt zwischen das Zeichen-Paar.
+Beispiel: Sie tippen { und es wird zu {|} vervollständigt wobei das Zeichen
+| die Cursor Position darstellt.
+
+
+TASTATURBELEGUNG                               *autoclose-mapping*
+
+,a
+Dieses Tastaturkürzel schaltet das Plugin ein beziehungsweise aus.
+
+
+UEBER                                          *autoclose-ueber*
+
+autoclose.vim ist verfügbar auf GitHub:
+
+  https://github.com/adelarsq/Vim-Autoclose
+
+und auch auf VimScripts:
+
+  http://www.vim.org/scripts/script.php?script_id=1849
+
+
+vim:tw=78:ts=4:ft=help:norl:
