@@ -31,9 +31,15 @@ URL="ftp://ftp.vim.org/pub/vim/patches/8.0/"
 # Directory where Vim sources are located
 #SRC_DIR="/usr/src/vim"
 SRC_DIR="$HOME/tmp/vim"
+if [[ ! -d ${SRC_DIR}/patches ]] ; then
+	mkdir -p ${SRC_DIR}/patches
+fi
 
 # Where save tar-bziped archiv
 DIST_DIR="$HOME/public_html/vim/dist"
+if [[ ! -d $DIST_DIR ]] ; then
+	mkdir -p $DIST_DIR
+fi
 
 #
 # END of user setup
