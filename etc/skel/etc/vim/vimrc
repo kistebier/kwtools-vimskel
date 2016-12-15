@@ -21,7 +21,7 @@ endif
 " To be secure & Vi nocompatible
 :set secure nocompatible
 :if version < 600
-:	echo "Please update your vim to 6.x version (version 7.2 is available, version 7.3 will be soon!)"
+:	echo "Please update your vim to 6.x version (version 7.3 is available, version 8.0 will be soon!)"
 :	finish
 :endif
 
