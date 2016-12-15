@@ -352,20 +352,6 @@ noremap ZX mzggvGzX'z
 
 " }}}
 
-" Settings for IMAP input method (IMAP plugin) {{{
-
-" set variable "b:input_method" to change input method
-let b:input_method = "latin2"
-
-" you may disable actions of IMAP plugin with variable b:disable_imap
-" 0 - enabled
-" 1 - disabled
-let b:disable_imap = 0
-
-call Source("~/.vim/plugin/imaps.vim")
-
-" }}}
-
 " New commands {{{
 command! -nargs=0 -range Indent          <line1>,<line2>call Indent()
 command! -nargs=0 -range FoldLongLines   <line1>,<line2>call FoldLongLines()
