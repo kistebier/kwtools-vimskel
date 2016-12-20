@@ -1,12 +1,15 @@
 kwtools-vimskel (0.1.1-1) unstable; urgency=low
   * New syntax and plugin files boxes.vim.
   * New spell files de.ascii.spl and de.utf-8.spl.
-  * New doc files CheckAttach.txt, gnupg.txt and gnupg.dex.
+  * New doc files CheckAttach.txt, gnupg.txt and gnupg.dex and other.
   * New ftplugin files mutt.vim and mail/CheckAttach.vim.
   * Update of header in any files.
+  * New plugin autoclose.vim.
   * progmenu.vim,helpmenu.vim: Convert text from ISO-8859 to UTF-8.
+  * vimrc: Vim version updateted and imaps.vim deleted.
+  * Add new Readme file README.install.de.
 
- -- Kai Wilke <kiste@netzworkk.de>  Thu, 06 Oct 2016 21:37:08 +0100
+ -- Kai Wilke <kiste@netzworkk.de>  Tue, 20 Dec 2016 22:15:08 +0100
  
 kwtools-vimskel (0.1.0-1) unstable; urgency=low
   * update: all Scripts and functions.
