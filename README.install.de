@@ -1,0 +1,678 @@
+# README.install.de
+#
+# Autor: Kai Wilke <kiste@netzworkk.de> 20.12.2016
+#
+# Beschreibung: Beschreibung für die Installation von Vim
+# wichtigen Plugins/Scripts.
+#
+# Version: 0.1
+#
+######################################################
+# INFO: imaps.vim ist nur im Debian Paket vim-latexsuite
+# vorhanden.
+######################################################
+
+Inhalt:{{{
+
+1. Beschreibung
+2. Vorbereitung
+3. Grundvorraussetzung
+4. einzelne Erweiterungen installieren
+4.1 taglist
+4.2 templatefile.vim
+4.3 bufexplorer
+4.4 calendar
+4.5 VBlockquote.vim
+4.6 gnupg.vim
+4.7 boxes.vim
+4.8 CheckAttach
+4.9 SearchComplete
+4.10 autoclose.vim
+4.11 vcscommand
+4.12 dbext
+4.13 ingo-library
+4.14 writebackup
+4.15 writebackupVersionControl
+4.16 writebackupToAdjacentDir
+4.17 writebackupAutomator
+4.18 sqlcomplete.vim
+4.19 sql.vim
+
+5. Befehle zu den Funktionen/Scripts
+5.1 taglist
+5.2 templatefile.vim
+5.3 bufexplorer
+5.4 calendar.vim
+5.5 VBlockquote.vim
+5.6 gnupg.vim
+5.7 boxes.vim
+5.8 CheckAttach
+5.9 SearchComplete.vim
+5.10 autoclose.vim
+5.11 vcscommand
+5.12 dbext
+5.13 ingo-library
+5.14 writebackup
+5.15 writebackupVersionControl
+5.16 writebackupToAdjacentDir
+5.17 writebackupAutomator
+5.18 sqlcomplete.vim
+5.19 sql.vim (ftplugin)
+
+6. Vim (gtk) Menü
+
+7. eigene Scripte/Dateien
+
+8. Spell Dateien
+
+#}}}
+---------------------------------------------------------------------
+1. Beschreibung{{{
+---------------------------------------------------------------------
+
+Dieses README soll Ihnen helfen einige Funktionen in Ihrem Editor Vim
+zu installieren beziehungsweise deren Funktionen/Befehle hand zu haben.
+
+Benutzen Sie :helptags um ihr doc Verzeichnis um die Tags fuer die Hilfe
+zur generieren. Z. B.:
+:helptags ~/.vim/doc
+
+Wenn Sie Tastenbelegungen herausfinden moechten, z. B. fuer eigene
+Einstellungen, benutzen Sie die Tastenkombination:
+vim Test.txt
+i - insertmode
+STRG+v+Taste
+Das ganze geht auch mit der Aufzeichnung im vim.
+
+#}}}
+---------------------------------------------------------------------
+2. Vorbereitung{{{
+---------------------------------------------------------------------
+
+Sichern Sie Ihre vim Konfigurationsdateien. Diese sind meist ~/.vimrc,
+~/.vim und ~/.gvimrc
+
+#}}}
+---------------------------------------------------------------------
+3. Grundvorraussetzung{{{
+---------------------------------------------------------------------
+
+Als erstes müssen Sie sich den Editor "Vim" installieren, entweder die
+Pakete aus Ihrem System Repository oder von
+http://www.vim.org/download.php.
+
+Danach erstellen Sie folgende Verzeichnis-Struktur und Links:
+
+Beispiel:
+cd ~
+mkdir -p etc/vim/vim
+ln -sf etc/vim/vim .vim
+ln -sf etc/vim/vimrc .vimrc
+ln -sf etc/vim/gvimrc .gvimrc
+
+#}}}
+---------------------------------------------------------------------
+4. einzelne Erweiterungen installieren{{{
+---------------------------------------------------------------------
+
+4.1 Script taglist.vim (global vorhanden, Paket vim-scripts):
+Beschreibung: Tag-list ist ein plugin zum browsen im SourceCode
+verschiedener Sprachen und einer Übersicht der Struktur dieses. 
+Download: http://www.vim.org/scripts/script.php?script_id=273
+Als erstes wird das Zip-Archiv taglist_46.zip entpackt.
+cd ~/.vim
+unzip Path/To/taglist_46.zip
+Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
+1. Beschreibung.
+
+4.1.1 vim-addons Manager benutzen:
+vim-addons install taglist
+oder als root
+vim-addons --sytsem-wide install taglist
+
+---------------------------------------------------------------------
+
+4.2 Script templatefile.vim:
+Beschreibung: Loads a template file and does customizable processing
+when editing a new file. 
+Download: http://www.vim.org/scripts/script.php?script_id=198
+Als erstes wird das Tar-Archiv templatfile-1.5.tar.gz entpackt.
+cd ~/.vim
+tar -xzvf Path/To/templatefile-1.5.tar.gz
+Danach vim/gvim neu starten.
+
+---------------------------------------------------------------------
+
+4.3 Script bufexplorer (global vorhanden oder zu alt):
+Beschreibung: Explorer fuer den Buffer. Benoetigt vim >=7.4
+Download: http://www.vim.org/scripts/script.php?script_id=42
+Als erstes wird das Zip-Archiv bufexplorer.zip entpackt.
+cd ~/.vim
+unzip Path/To/bufexplorer-7.4.9.zip
+Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
+1. Beschreibung.
+
+4.3.1 vim-addons Manager benutzen:
+vim-addons install bufexplorer
+oder als root
+vim-addons --sytsem-wide install bufexplorer
+
+---------------------------------------------------------------------
+
+4.4 Script calendar.vim (global vorhanden oder zu alt):
+Beschreibung: Wie der Name schon sagt zeigt calendar.vim eine
+Kalenderansicht.
+Download: http://www.vim.org/scripts/script.php?script_id=52
+Ist zwar auch schon mit in vim, funktioniert bei mir aber nichts
+anders, bzw. ist in Debian veraltet.
+Als erstes wird das Zip-Archiv calendar-vim.zip entpackt.
+cd ~/.vim
+unzip Path/To/calendar-vim.zip
+Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
+1. Beschreibung.
+
+4.3.1 vim-addons Manager benutzen:
+vim-addons install calendar
+oder als root
+vim-addons --sytsem-wide install calendar
+
+---------------------------------------------------------------------
+
+4.5 Script VBlockquote.vim (nicht vorhanden):
+Beschreibung: VBlockquote.vim quotet ihren Text zur besseren Ansicht.
+Download: Googlen oder ftp://www.netzworkk.de/pub/kiste/vim/VBlockquote.vim
+Einfach VBlockquote.vim nach ~/.vim/plugin kopieren.
+Danach vim/gvim neu starten.
+
+---------------------------------------------------------------------
+
+4.6 Script gnupg.vim (anderes global vorhanden):
+Beschreibung: Bearbeitung von verschluesselten Dateien mit der Endung
+(Suffix) .gpg, .pgp und .asc (Mail).
+Download: http://www.vim.org/scripts/script.php?script_id=3645
+Download old: http://www.vim.org/scripts/script.php?script_id=661
+Einfach gnupg.vim nach ~/.vim/plugin kopieren. Ist zwar auch schon
+etwas aehnliches in vim 7.2, aber dieses bietet doch noch mehr
+Möglichkeiten und wird von journal.vim benutzt.
+Danach vim/gvim neu starten.
+
+4.6.1 vim-addons Manager benutzen:
+vim-addons install gnupg
+oder als root
+vim-addons --sytsem-wide install gnupg
+
+---------------------------------------------------------------------
+
+4.7 boxes.vim (selbst geschrieben):
+Beschreibung: zitiert Text und quotet es ähnlich wie VBlockquote.vim.
+Download: Paket boxes installieren und die Beispieldatei boxes.vim
+nach ~/.vim/syntax kopieren.
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.8 CheckAttach.vim:
+Beschreibung: Check for attachments when writing mails with mutt.
+Download: http://www.vim.org/scripts/script.php?script_id=2796
+Benötigt vim >=7.4.
+Installation via
+vimball or via the :UseVimball command.
+    vim CheckAttach.vmb
+    :so %
+To uninstall, use the :RmVimball command. 
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.9 SearchComplete.vim:
+Beschreibung: Completion on the '/' search line.
+Download: http://www.vim.org/scripts/script.php?script_id=474
+Einfach nach ~/.vim/plugin kopieren.
+
+---------------------------------------------------------------------
+
+4.10 autoclose.vim:
+Beschreibung: Inserts matching bracket, paren, brace or quote.
+Download: http://www.vim.org/scripts/script.php?script_id=1849
+Einfach nach ~/.vim/plugin kopieren.
+
+---------------------------------------------------------------------
+
+4.11 Script vcscommand (vorhanden aber meist zu alt):
+Beschreibung: Verwaltung/Bearbeitung von Versions-Control-System
+Dateien, wie cvs, svk, svn und git. Benoetigt vim >=7.0.
+Download: http://www.vim.org/scripts/script.php?script_id=90
+Als erstes wird das Zip-Archiv vcscommand.zip entpackt.
+cd ~/.vim
+unzip Path/To/vcscommand.zip
+Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
+1 Beschreibung.
+
+4.10.1 vim-addons Manager benutzen:
+vim-addons install vcscommand
+oder als root
+vim-addons --sytsem-wide install vcscommand
+
+---------------------------------------------------------------------
+
+4.12 dbext:
+Beschreibung: Benoetigt einige Datenbank clients, bei postgresql
+Datenbanken postgresql-client-common (Debian). Und so weiter
+Download: http://www.vim.org/scripts/script.php?script_id=356
+Installierung:
+Als erstes wird das Zip Archiv dbext.zip entpackt.
+cd ~/.vim
+unzip Path/To/dbext_2400.zip
+Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
+1 Beschreibung.
+
+---------------------------------------------------------------------
+
+4.13 ingo-library:
+Beschreibung: Vimscript library of common functions.
+Download: http://www.vim.org/scripts/script.php?script_id=4433 
+Installation via
+vimball or via the :UseVimball command.
+    vim ingo-library*.vmb.gz
+    :so %
+To uninstall, use the :RmVimball command.
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.14 writebackup:
+Beschreibung: Write backups of current file with date file extension.
+Benötigt: ingo-library
+Download: http://www.vim.org/scripts/script.php?script_id=1828
+Installation via
+vimball or via the :UseVimball command.
+    vim writebackup*.vmb.gz
+    :so %
+To uninstall, use the :RmVimball command. 
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.15 writebackupVersionControl:
+Beschreibung: Version control functions (diff, restore, history
+Benötigt: ingo-library
+navigation) for backups made with the writebackup plugin,
+which have a date file extension in the format '.YYYYMMDD[a-z]'.
+Download: http://www.vim.org/scripts/script.php?script_id=1829
+Installation via
+vimball or via the :UseVimball command.
+    vim writebackupVersionControl*.vmb.gz
+    :so %
+To uninstall, use the :RmVimball command. 
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.16 writebackupToAdjacentDir:
+Beschreibung: Redirect backups made by the writebackup plugin
+(vimscript #1828) that would normally go into the original file's
+directory into an adjacent directory with a "{dir}.backup" name,
+if it exists. This allows to use the plugin in places where
+backup files would cause problems.
+Benötigt: ingo-library
+Download: http://www.vim.org/scripts/script.php?script_id=3107
+Installation via
+vimball or via the :UseVimball command.
+    vim writebackupToAdjacentDir*.vmb.gz
+    :so %
+To uninstall, use the :RmVimball command. 
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.17 writebackupAutomator:
+Beschreibung: Automatically write a backup on the first write.
+Benötigt: ingo-library
+Download: http://www.vim.org/scripts/script.php?script_id=3940
+Als erstes wird das Zip Archiv writebackupAutomator.vba.gz entpackt.
+Installation via
+vimball or via the :UseVimball command.
+    vim writebackupAutomator.vba.gz
+    :so %
+To uninstall, use the :RmVimball command. 
+Danach vim/gvim neu starten
+
+---------------------------------------------------------------------
+
+4.18 sqlcomplete (global vorhanden):
+Version: 16.0 ist in vim 8.0 implementiert.
+Beschreibung: Benoetigt optional dbext.vim, s. 4.11.
+Download: http://www.vim.org/scripts/script.php?script_id=1572
+Installierung: cp -av Path/To/sqlcomplete.vim ~/.vim/autoload
+Danach vim/gvim neu starten
+Hilfe kann man aufrufen mit:
+:h sql.txt
+:h sql-completion
+
+---------------------------------------------------------------------
+
+4.19 sql.vim (geht mit dbext zusammen):
+Version: 10.0 ist in vim 7.3 implementiert.
+11.0 ist in vim 8.0 implementiert.
+Beschreibung: ftplugin for SQL (Common for Oracle, Microsoft SQL
+Server, Sybase, ...).
+Download: http://www.vim.org/scripts/script.php?script_id=454
+Einfach nach ~/.vim/ftplugin kopieren.
+
+
+#}}}
+---------------------------------------------------------------------
+5. Befehle zu den Funktionen/Scripts# {{{
+---------------------------------------------------------------------
+
+5.1 taglist.vim (plugin):
+Quellcode Browser (Support für C/C++, java, perl, python, tcl, sql,
+php, etc.).
+Besitzt eine englische Hilfe.
+
+Siehe :h taglist.txt
+
+---------------------------------------------------------------------
+
+5.2 templatfile.vim (plugin):
+
+Lädt eine Template-Datei falls eine existiert und deren Sclüsselwörter
+werden erweitert und/oder eine benutzerdefinierte Funktion für diese
+Art von Datei aufgerufen.
+Besitzt eine deutsche Hilfe (von mir).
+
+h: templatefile.dex
+
+---------------------------------------------------------------------
+
+5.3 bufexplorer.vim (plugin):
+
+:BufExplorer - startet den Buffer Explorer normal im aktellen Fenster.
+:HSBufExplorer - startet den Buffer Explorer in einem neuem horizontalen
+Fenster.
+:VSBufExplorer - startet den Buffer Explorer in einem neuem vertikalen
+Fenster.
+Restliche Kommands etc. siehe Hilfe.
+Besitzt eine englische Hilfe.
+
+:h bufexplorer*
+
+---------------------------------------------------------------------
+
+5.4 calendar.vim (plugin):
+
+:Calendar - normale Anzeige des Kalenders an der linken Seite vom vim.
+:CalendarH - Anzeige des Kalenders in horizontaler Lage.
+Mit der Taste "q" beendet man die Kalenderanzeige.
+Besitzt eine englische Hilfe.
+
+:h calendar*
+
+---------------------------------------------------------------------
+
+5.5 VBlockquote.vim (plugin):
+
+Wenn Sie einen Text/Zeile vorher markieren bezieht sich das auf die
+Markierung.
+Besitzt eine deutsche Hilfe (von mir).
+(siehe auch Header der Datei):
+:call VBlockquote () =
+,----
+| 
+`----
+
+:call VBlockquote ("Test") =
+,----[ test ]
+|
+`----
+
+:h VBlockquote.dex
+
+---------------------------------------------------------------------
+
+5.6 gnupg.vim (plugin, alles gnupg):
+
+Dieses Plugin funktioniert nur bei Dateien mit dem Suffix .gpg, .asc
+und .pgp, also verschlüsselten Dateien. Besitzt eine englische und
+deutsche Hilfe (von mir).
+
+In die Shell Ihrer Wahl die beiden Zeilen eintragen:
+GPG_TTY='tty'
+export GPG_TTY
+
+:GPGEditRecipients
+Öffnen des Buffers um die Empfänger zu ändern. Empfänger die
+unbekannt sind (nicht ihr eigener öffentlicher Schlüssel) werden
+hervor gehoben und haben ein "!" Zeichen voran gestellt.
+             
+:GPGViewRecipients
+Zeigt eine Liste der Empfänger. Normal ist die Email-Adresse des
+eigeloggten Users. Unbekannte Empfänger werden mit dem Zeichen !
+gekennzeichnet.
+                   
+:GPGEditOptions
+                                     
+:GPGViewOptions
+Zeigt eine Liste an Optionen.
+
+Es besitzt auch ein Plugin Menü (gvim) für die Befehle.
+Besitzt eine deutsche Hilfe (von mir).
+
+:h gnupg
+
+---------------------------------------------------------------------
+
+5.7 boxes.vim (syntax, plugin):
+
+Besitzt eine deutsche Hilfe und ist ähnlich VBlockquote.vim
+Die deutsche Hilfe und das Plugin (Tastaturkürzel, Menü) sind von mir.
+
+:h boxes.dex
+
+---------------------------------------------------------------------
+
+5.8 CheckAttach (ftplugin):
+
+Besitzt eine englische Hilfe. Wenn Sie den Mail Klienten "mutt" benutzen
+und es im Text-Körper eines der Wörter Anhang,angehängt,atached oder
+attachment vorkommen übernimmt das Plugin CheckAttach.vim die Kontrolle,
+damit Sie nicht vergessen eine oder mehrere Datei(en) an die Email
+anzuhängen.
+
+:h CheckAttach*
+
+---------------------------------------------------------------------
+
+5.9 SearchComplete.vim (plugin):
+
+Eine Datei mit vim öffnen und auf der Befehlszeile das Zeichen '/'
+(suchen) tippen und dann ein oder mehrere im Text vorkommende Zeichen
+eintippen und die TAB-Taste drücken für eine Vervollständigung des
+Suchbegriffs.
+
+---------------------------------------------------------------------
+
+5.10 autoclose.vim (plugin):
+
+Eine Datei mit vim öffnen und auf der Befehlszeile eines der Zeichen
+[, (, {, ", ' tippen und diese werden gepaart und der Cursor springt
+zwischen das Zeichen-Paar. Beispiel: Sie tippen { und es wird zu {|}
+vervollständigt wobei das Zeichen | die Cursor Position darstellt.
+Sie können dieses Plugin standardmässig mit \a an und aussschalten.
+Die deutsche Hilfe und das Tastarkürzel in ~/.vim/local/vimrc sind von
+mir.
+
+:h autoclose.dex
+
+---------------------------------------------------------------------
+
+5.11 vcscommand (plugin)
+
+Siehe :h VCS*. Ist einfach zuviel zum aufschreiben.
+Dieses Plugin stellt Befehle für verschiedene Revisions Control Systeme
+zur Verfügung. Dazu müssen Sie sich im dementsprechen Verzeichnis befinden.
+Es besitzt auch ein Plugin Menü (gvim) für die Befehle.
+
+---------------------------------------------------------------------
+
+5.12 dbext:
+
+Kommt noch
+Es besitzt auch ein Plugin Menü (gvim) für die Befehle.
+Besitzt eine englische Hilfe.
+
+:h dbext*
+
+---------------------------------------------------------------------
+
+5.13 ingo-library
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h ingo-library
+
+---------------------------------------------------------------------
+
+5.14 writebackup
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h writebackup
+
+---------------------------------------------------------------------
+
+5.15 writebackupVersionControl
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h writebackupVersionControl
+
+---------------------------------------------------------------------
+
+5.16 writebackupToAdjacentDir
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h writebackupToAdjacentDir
+
+---------------------------------------------------------------------
+
+5.17 writebackupAutomator
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h writebackupAutomator
+
+---------------------------------------------------------------------
+
+5.18 sqlcomplete (autoload):
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h sql.txt
+:h sql-completion
+
+---------------------------------------------------------------------
+
+5.19 sql.vim (ftplugin):
+
+Kommt noch
+Besitzt eine englische Hilfe.
+
+:h sql.txt
+
+---------------------------------------------------------------------
+
+## }}}
+---------------------------------------------------------------------
+6. Vim (gtk) Menü# {{{
+---------------------------------------------------------------------
+
+Hier erscheint eine eigene Menü-Konfiguration die zusätzlich zu den
+installierten Plugins angezeigt wird.
+## }}}
+---------------------------------------------------------------------
+7. eigene Scripte/Dateien # {{{
+---------------------------------------------------------------------
+
+skel.* Dateien: Wenn man z. B. (g)vim Datei.zsh aufruft und die
+Datei.zsh neu ist wird der Header des Scripts/Datei mit den Werten
+des Autors erstellt. Vorausgesetzt er wurde schon vorher konfiguriert.
+Dazu muss man die Datei ~/.vim/local/vimrc-USER anlegen.
+z.B. (vimrc-USER):
+let g:company = "Firmenname"
+let g:email = "USER@domain.de"
+let g:author = "Vorname Name"
+let g:homepage = "URI"
+
+Diese Dateien liegen im Verzeichnis ~/.vim/templates und müssen mit
+dem Prefix "skel" beginnen und das Suffix (Dateiendung) des Dateityps
+besitzen. Bsp.: zsh = skel.zsh, Bash = skel.sh.
+
+Man kann sich auch selbst ein Wörterbuch zur Vervollständigung
+erstellen. Indem man unter ~/.vim ein Verzeichnis anlegt mit einer
+sh.dic Datei die jeweils ein Wort pro Zeile besitzen.
+Mit CTRL+X-CTRL+K kann man dann die Wörter ergänzen. 
+Danach tragen Sie in ihre vimrc oder ./vim/local/vimrc folgenes ein:
+" Wörter Verfollständigung durch die Datei
+" ~/.vim/dictionaries
+set dictionary=~/.vim/dictionaries/sh.dic"
+
+## }}}
+---------------------------------------------------------------------
+8. Spell Rechtschreibungsprüfung) Dateien # {{{
+
+Installiert Euch das Paket hunspell-de-de.
+Mit folgenden Befehl legt Ihr noch einen benötigten Ordner an:
+mkdir -p ~/.vim/spell
+Dann startet Ihr vim und führt folgende Befehle im Normalmodus aus;
+für UTF-8 (locale Einstellung) und ASCII:
+:mkspell ~/.vim/spell/de /usr/share/hunspell/de_DE "ENTER"
+:mkspell -ascii ~/.vim/spell/de /usr/share/hunspell/de_DE "ENTER"
+
+de_DE_neu ist der Datei-Name ohne Dateiendung des verwendeten Wörterbuches.
+Anschließend stehen Ihnen die Dateien de.utf-8.spl und de.ascii.spl zur
+Verfügung. Die Erstellung dauert ein paar Minuten.
+ 
+Die geschilderte Vorgehensweise ist für alle gewünschten Wörterbücher
+so sie denn im myspell-Format vorliegen zu wiederholen.
+
+Die Einstellung für das Wörterbuch wird in der ~/.vimrc oder einer davon
+gesourcten Datei vorgenommen. iEin Beispiel für die deutsche
+Rechtschreibprüfung und Taste F3 zum an/ausschalten dieser in
+~/.vim/local/vimrc.
+Dazu ist folgender Eintrag nötig:
+" Rechtschreibpruefung
+if version >= 700
+	let loaded_matchparen = 1
+	
+	" turn spelling on by default
+	set spell
+	
+	" change to german
+	set spelllang=de,en
+	
+	" Spellfiles runterladen
+	"set spf
+
+	" file that "zg" adds good words to
+	" (local to buffer)	
+	set spf=~/.vim/spell/de.add
+	" toggle spelling with F3 key 
+	noremap <F3> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3* &spell, 3)<CR>
+	
+	" limit it to just the top 10 items
+	set sps=best,10
+endif
+# }}}
+---------------------------------------------------------------------
+# Modeline {{{
+# vim:set ts=4:
+# vim600:fdm=marker fdl=0 fdc=3
+# }}}
