@@ -1,6 +1,6 @@
 # README.install.de
 #
-# Autor: Kai Wilke <kiste@netzworkk.de> 20.12.2016
+# Autor: Kai Wilke <kiste@netzworkk.de> 21.12.2016
 #
 # Beschreibung: Beschreibung für die Installation von Vim
 # wichtigen Plugins/Scripts.
@@ -126,9 +126,9 @@ Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
 1. Beschreibung.
 
 4.1.1 vim-addons Manager benutzen:
-vim-addons install taglist
+vim-addons --source-dir /SOURCE_DIR install taglist
 oder als root
-vim-addons --sytsem-wide install taglist
+vim-addons --sytsem-wide --source-dir /SOURCE_DIR install taglist
 
 ---------------------------------------------------------------------
 
@@ -153,9 +153,9 @@ Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
 1. Beschreibung.
 
 4.3.1 vim-addons Manager benutzen:
-vim-addons install bufexplorer
+vim-addons --source-dir /SOURCE_DIR install bufexplorer
 oder als root
-vim-addons --sytsem-wide install bufexplorer
+vim-addons --sytsem-wide --source-dir /SOURCE_DIR install bufexplorer
 
 ---------------------------------------------------------------------
 
@@ -172,9 +172,9 @@ Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
 1. Beschreibung.
 
 4.3.1 vim-addons Manager benutzen:
-vim-addons install calendar
+vim-addons --source-dir /SOURCE_DIR install calendar
 oder als root
-vim-addons --sytsem-wide install calendar
+vim-addons --sytsem-wide --source-dir /SOURCE_DIR install calendar
 
 ---------------------------------------------------------------------
 
@@ -197,9 +197,9 @@ Möglichkeiten und wird von journal.vim benutzt.
 Danach vim/gvim neu starten.
 
 4.6.1 vim-addons Manager benutzen:
-vim-addons install gnupg
+vim-addons --source-dir /SOURCE_DIR install gnupg
 oder als root
-vim-addons --sytsem-wide install gnupg
+vim-addons --sytsem-wide --source-dir /SOURCE_DIR install gnupg
 
 ---------------------------------------------------------------------
 
@@ -249,9 +249,9 @@ Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
 1 Beschreibung.
 
 4.10.1 vim-addons Manager benutzen:
-vim-addons install vcscommand
+vim-addons --source-dir /SOURCE_DIR install vcscommand
 oder als root
-vim-addons --sytsem-wide install vcscommand
+vim-addons --sytsem-wide --source-dir /SOURCE_DIR install vcscommand
 
 ---------------------------------------------------------------------
 
@@ -265,6 +265,11 @@ cd ~/.vim
 unzip Path/To/dbext_2400.zip
 Danach vim/gvim neu starten und :helptags aufrufen s. Punkt
 1 Beschreibung.
+
+4.12.1 vim-addons Manager benutzen:
+vim-addons --source-dir /SOURCE_DIR install dbext
+oder als root
+vim-addons --sytsem-wide --source-dir /SOURCE_DIR install dbext
 
 ---------------------------------------------------------------------
 
@@ -351,7 +356,7 @@ Hilfe kann man aufrufen mit:
 
 ---------------------------------------------------------------------
 
-4.19 sql.vim (geht mit dbext zusammen):
+4.19 sql.vim (arbeitet mit dbext zusammen):
 Version: 10.0 ist in vim 7.3 implementiert.
 11.0 ist in vim 8.0 implementiert.
 Beschreibung: ftplugin for SQL (Common for Oracle, Microsoft SQL
