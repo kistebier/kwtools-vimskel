@@ -11,7 +11,7 @@ kwtools-vimskel (0.1.1-1) unstable; urgency=low
   * vimrc: Vim Version aktualisiert und Einstellungen zu imaps.vim gelöscht.
   * Neue Readme Datei README.install.de kam hinzu.
 
- -- Kai Wilke <kiste@netzworkk.de>  Tue, 20 Dec 2016 22:14:08 +0100
+ -- Kai Wilke <kiste@netzworkk.de>  Wed, 21 Dec 2016 04:43:22 +0100
  
 kwtools-vimskel (0.1.0-1) unstable; urgency=low
   * update: alle Scripte und Functionen.

@@ -12,6 +12,6 @@ Architecture: all
 Priority: optional
 Depends: vim (>= 7.4)
 Suggests: translate
-Replaces: kwtools-vimskel (<< ${misc:Depends})
+Replaces: kwtools-vimskel (<< 0.1.1-1)
 Description: vim skeleton files.
- These are general Example files and functions for vim 8.
+ These are general example files and functions for vim 8.

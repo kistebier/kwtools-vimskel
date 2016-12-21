@@ -51,7 +51,8 @@ install: build
 	
 	# kwtools-vimskel
 	cp -a etc/skel $(CURDIR)/debian/$(package-vim)/$(etc_path)
-	cp -a AUTHORS changelog* copyright README* Release TODO \
+	cp -a AUTHORS changelog.de copyright README.Debian* \
+		README.install* Release TODO \
 		$(CURDIR)/debian/$(package-vim)/$(doc_path)/$(package-vim)
 
 # We have nothing to do by default.
@@ -64,8 +65,9 @@ binary-indep: build install
 	dh_testroot
 #	dh_installdebconf	
 	dh_installdocs
-	dh_installchangelogs
+	dh_installchangelogs --exclude=changelog
 	dh_link
+	dh_lintian
 	dh_strip
 	dh_compress
 	dh_fixperms

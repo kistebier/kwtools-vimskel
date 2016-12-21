@@ -26,7 +26,7 @@ set -e
 case "$1" in
 	configure)
 		DOCDIR=/etc/skel/etc/vim/vim/doc
-		vim -u NONE -U NONE -c ":helptags $DOCDIR" -c ":q" > /dev/null
+		vim -u NONE -U NONE -c ":helptags $DOCDIR" -c ":q" 2>&1 1>/dev/null
 		exit 0
 		;;
 	abort-upgrade|abort-remove|abort-deconfigure)
